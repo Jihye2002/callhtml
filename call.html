@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>전화 연결</title>
+</head>
+<body>
+  <!-- 화면에 실제 전화번호 버튼 표시 -->
+  <a href="tel:01012345678" 
+     style="font-size:24px; color:blue; text-decoration:underline;">
+    010-1234-5678
+  </a>
+
+  <!-- 자동 클릭 스크립트 (페이지 열리자마자 전화 앱 실행) -->
+  <script>
+    window.onload = function() {
+      const link = document.querySelector('a[href^="tel:"]');
+      if (link) link.click();
+    };
+  </script>
+</body>
+</html>
