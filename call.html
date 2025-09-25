@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>전화 연결</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+    }
+    .call-button {
+      font-size: 32px;
+      color: white;
+      background-color: #007aff;
+      padding: 20px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .call-button:active {
+      background-color: #0051a8;
+    }
+  </style>
 </head>
 <body>
-  <!-- 화면에 전화번호 표시 -->
-  <a href="tel:0222860324" 
-     style="font-size:24px; color:blue; text-decoration:underline;">
-    02-2286-0324
+  <a class="call-button" href="tel:0222860324">
+    02-2286-0324 전화걸기
   </a>
-
-  <!-- 자동 클릭 스크립트 -->
-  <script>
-    window.onload = function() {
-      const link = document.querySelector('a[href^="tel:"]');
-      if (link) link.click();
-    };
-  </script>
 </body>
 </html>
+
+
+
 
 
 
